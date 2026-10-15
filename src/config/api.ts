@@ -1,5 +1,2 @@
-export const BACKEND_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5012";
-
 export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || `${BACKEND_URL}/api/v1`;
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5012/api/v1";
