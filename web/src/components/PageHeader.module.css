@@ -1,0 +1,1 @@
+.header{display:flex;justify-content:space-between;align-items:center;gap:16px}.header h1{margin:7px 0}.header p:last-child{font-size:13px;line-height:1.6}@media(max-width:600px){.header{align-items:flex-start;flex-direction:column}}

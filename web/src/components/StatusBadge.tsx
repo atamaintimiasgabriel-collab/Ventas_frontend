@@ -1,0 +1,3 @@
+import styles from './StatusBadge.module.css';
+const labels:Record<string,string>={PENDIENTE:'Pendiente',EN_PROCESO:'En proceso',CONFIRMADO:'Confirmado',ATENDIDO:'Atendido',CANCELADO:'Cancelado',RECHAZADO:'Rechazado',ACTIVO:'Activo',INACTIVO:'Inactivo',BAJO:'Stock bajo',AGOTADO:'Agotado',DISPONIBLE:'Disponible'};
+export function StatusBadge({status}:{status:string}){const tone=['ATENDIDO','CONFIRMADO','ACTIVO','DISPONIBLE'].includes(status)?'green':['PENDIENTE','BAJO'].includes(status)?'amber':['RECHAZADO','AGOTADO'].includes(status)?'red':status==='EN_PROCESO'?'blue':'gray';return <span className={`${styles.badge} ${styles[tone]}`}><span aria-hidden="true">●</span>{labels[status]??status}</span>;}

@@ -1,0 +1,166 @@
+.cart {
+  position: sticky;
+  top: 94px;
+  align-self: start;
+}
+.count {
+  background: #edf3ff;
+  color: #245eea;
+  font-size: 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.body {
+  padding: 0 22px 22px;
+}
+.body>label {
+  font-size: 11px;
+}
+.body select {
+  width: 100%;
+  font-size: 12px;
+}
+.items {
+  margin-top: 20px;
+  max-height: 330px;
+  overflow: auto;
+}
+.empty {
+  text-align: center;
+  padding: 30px 15px;
+  color: #8d9aab;
+}
+.empty h3 {
+  font-size: 13px;
+  color: #526a82;
+  margin: 12px 0 8px;
+}
+.empty p {
+  font-size: 11px;
+  line-height: 1.7;
+}
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.item h3 {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.item small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.item>strong {
+  font-size: 12px;
+  align-self: center;
+}
+.remove {
+  background: none;
+  border: 0;
+  color: #a45d65;
+  align-self: start;
+  padding: 3px;
+}
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.quantity button {
+  display: flex;
+  background: #f7f9fc;
+  border: 0;
+  padding: 8px;
+}
+.quantity span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 11px;
+}
+.clear {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: none;
+  border: 0;
+  font-size: 10px;
+  color: #8795a8;
+  padding: 12px 0;
+}
+.totals {
+  margin: 24px 0 20px;
+  display: grid;
+  gap: 12px;
+  font-size: 12px;
+  color: #77869a;
+}
+.totals>div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.totals dd {
+  margin: 0;
+  font-weight: 600;
+  color: #3c4c62;
+}
+.totals .total {
+  padding-top: 16px;
+  border-top: 1px dashed #d9e0e9;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d3046;
+}
+.total dd {
+  color: #245eea;
+}
+.payment {
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.payment legend {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.payment label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.payment input {
+  accent-color: #245eea;
+  margin: 0;
+}
+.process {
+  width: 100%;
+}
+.disclaimer {
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.6;
+  color: #8493a7;
+  margin-top: 12px;
+}
+@media(max-width:1050px) {
+  .cart {
+    position: static;
+  }
+}

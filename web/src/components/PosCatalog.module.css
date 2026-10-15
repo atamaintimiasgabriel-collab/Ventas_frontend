@@ -1,0 +1,123 @@
+.catalog {
+  align-self: start;
+}
+.catalog .panel-heading p {
+  font-size: 11px;
+  margin-top: 6px;
+}
+.search {
+  padding: 0 22px;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 17px 22px;
+}
+.categories button {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 10px;
+  background: #fff;
+  color: #65758b;
+  font-size: 11px;
+}
+.categories button[aria-pressed=true] {
+  background: #172c43;
+  color: #fff;
+  border-color: #172c43;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 13px;
+  padding: 0 22px 22px;
+}
+.product {
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 13px;
+  min-width: 0;
+  transition: box-shadow .2s,border-color .2s;
+}
+.product:hover {
+  border-color: #abc2ed;
+  box-shadow: 0 6px 16px #1c3a6310;
+}
+.illustration {
+  height: 82px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse,#dce7e8,#f2f5f7);
+  color: #5e7b85;
+  border-radius: 7px;
+  margin-bottom: 12px;
+}
+.illustration span {
+  position: absolute;
+  bottom: 6px;
+  right: 7px;
+  color: #7f9299;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.product>small {
+  font-size: 9px;
+}
+.product h3 {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 6px;
+  min-height: 36px;
+}
+.product>p {
+  font-size: 9px;
+  color: #477561;
+  margin: 9px 0;
+}
+.product .out {
+  color: #b42332;
+}
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 10px;
+}
+.action strong {
+  font-size: 14px;
+}
+.action button {
+  width: 32px;
+  height: 32px;
+  background: #edf3ff;
+  color: #245eea;
+  border-color: #dce6fb;
+}
+@media(max-width:1250px) {
+  .grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:550px) {
+  .grid {
+    padding: 0 14px 14px;
+    gap: 10px;
+  }
+  .search {
+    padding: 0 14px;
+  }
+  .categories {
+    padding: 14px;
+  }
+  .product {
+    padding: 10px;
+  }
+  .action strong {
+    font-size: 12px;
+  }
+}

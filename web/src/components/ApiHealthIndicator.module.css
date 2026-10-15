@@ -1,0 +1,28 @@
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: var(--muted);
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #8b98a9; }
+.online .dot { background: #20875c; }
+.not-ready .dot { background: #c47a13; }
+.offline .dot { background: #bd3d47; }
+.loading .dot { animation: api-pulse 1.2s ease-in-out infinite; }
+.indicator button {
+  display: grid;
+  place-items: center;
+  padding: 2px;
+  border: 0;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+}
+@keyframes api-pulse { 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .loading .dot { animation: none; } }
+@media (max-width: 600px) {
+  .indicator > span:last-of-type { font-size: 0; }
+  .indicator > span:last-of-type::after { content: 'API'; font-size: 9px; }
+}

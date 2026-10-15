@@ -1,0 +1,151 @@
+.header {
+  height: 76px;
+  background: #ffffffed;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+}
+.context {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  background: #f5f7fa;
+  border: 1px solid var(--line);
+  padding: 0 10px;
+  border-radius: 8px;
+  color: #7a889b;
+}
+.search input {
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  width: 160px;
+  padding: 10px 0;
+}
+.search kbd {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+.results {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  box-shadow: var(--shadow);
+  padding: 8px;
+}
+.results a,.results p {
+  display: block;
+  padding: 10px;
+  font-size: 12px;
+}
+.results a:hover {
+  background: #eff4ff;
+}
+.branch {
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.user {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  white-space: nowrap;
+}
+.user strong {
+  font-size: 11px;
+  display: block;
+}
+.user small {
+  font-size: 10px;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e9edf5;
+  color: #4b6082;
+  font-size: 11px;
+  font-weight: 700;
+}
+.menu {
+  display: none;
+}
+@media(max-width:1250px) {
+  .branch {
+    display: none;
+  }
+  .header {
+    padding: 0 22px;
+  }
+  .search input {
+    width: 130px;
+  }
+}
+@media(max-width:900px) {
+  .menu {
+    display: flex;
+  }
+  .context {
+    display: none;
+  }
+}
+@media(max-width:600px) {
+  .header {
+    padding: 0 14px;
+    gap: 8px;
+    height: 66px;
+  }
+  .user>div {
+    display: none;
+  }
+  .search {
+    min-width: 0;
+  }
+  .search input {
+    width: 100%;
+    min-width: 0;
+  }
+  .search kbd {
+    display: none;
+  }
+  .user {
+    display: none;
+  }
+}
+.header .menu {
+  display: none;
+}
+@media(max-width:900px) {
+  .header .menu {
+    display: flex;
+  }
+}

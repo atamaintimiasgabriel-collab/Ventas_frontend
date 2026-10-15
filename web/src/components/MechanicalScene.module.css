@@ -1,0 +1,102 @@
+.scene {
+  position: relative;
+  min-height: 300px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -32px;
+}
+.bike {
+  width: 100%;
+  max-width: 730px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 15px 30px #0005);
+  animation: float 12s ease-in-out infinite;
+}
+.orbit {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #bfff9b20;
+  border-radius: 50%;
+  box-shadow: 0 0 120px #a0df6120,inset 0 0 100px #afeb6110;
+}
+.orbit::after {
+  content: '';
+  position: absolute;
+  inset: -24px;
+  border: 1px dashed #a2c29b25;
+  border-radius: 50%;
+  animation: rotate 100s linear infinite;
+}
+.orbitSmall {
+  position: absolute;
+  width: 450px;
+  height: 250px;
+  background: #6aa1ff0a;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+.coordinate {
+  position: absolute;
+  left: 32px;
+  top: 10px;
+  color: #7e92a6;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+.tag {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 11px 16px;
+  background: #172d36c9;
+  border: 1px solid #b7e19730;
+  border-radius: 6px;
+  color: #c8ecaa;
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  z-index: 3;
+}
+.tag i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b5eb88;
+  margin-right: 7px;
+}
+.tag span {
+  color: #829ea5;
+  margin-left: 12px;
+  font-size: 7px;
+}
+.spokes {
+  animation: rotate 150s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes float {
+  50% {
+    transform: translateY(-6px);
+  }
+}
+@media(max-width:1100px) {
+  .scene {
+    min-height: 230px;
+  }
+  .orbit {
+    width: 250px;
+    height: 250px;
+  }
+  .tag {
+    bottom: 0;
+  }
+}

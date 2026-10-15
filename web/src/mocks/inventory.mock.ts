@@ -1,0 +1,2 @@
+export const movements = [{id:'MOV-0142',product:'Aceite Motul 5100',type:'Entrada',quantity:'+12',warehouse:'Almacén principal',time:'10:30'},{id:'MOV-0141',product:'Bujía NGK CR7HSA',type:'Salida',quantity:'−4',warehouse:'Almacén principal',time:'09:56'},{id:'MOV-0140',product:'Cadena reforzada 428',type:'Entrada',quantity:'+8',warehouse:'Almacén secundario',time:'08:40'}];
+export const transfers = [{id:'TR-0038',product:'Filtro de aire XR 150',quantity:2,from:'Almacén secundario',to:'Almacén principal',status:'Programada'}];
